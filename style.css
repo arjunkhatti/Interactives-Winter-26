@@ -1,0 +1,51 @@
+h1 {
+    font-size: 2em;
+    color: #064c37;
+}
+
+#content {
+    width:60%;
+    margin:auto;
+}
+
+#story {
+    /*color: pink;*/
+    font-family:"Times New Roman', Times, serif";
+}
+
+#byline {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    /*font-style: italic;*/
+    font-weight: bold;
+}
+
+#photo-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;   
+}
+
+.photo_1 {
+  max-width: 43.8%;
+  border: 1.5px solid black;
+}
+
+.photo_2 {
+  max-width: 55.4%;
+  border: 1.5px solid black;
+}
+
+div {
+    border: solid 1px gray;
+}
+
+/* mobile rules */
+@media(orientation:portrait) {
+    #content {
+        width: 100%;
+    }
+    body{
+        font-size: 2em;
+    }
+}
