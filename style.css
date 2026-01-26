@@ -19,26 +19,27 @@ h1 {
     font-weight: bold;
 }
 
+/*create a flexbox container for the photos so that they are evenly spaced
+and display horizontally*/
 #photo-box {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  align-items: flex-start;   
+  justify-content: space-evenly;
 }
 
-.photo_1 {
-  max-width: 43.8%;
-  border: 1.5px solid black;
-}
-
-.photo_2 {
-  max-width: 55.4%;
-  border: 1.5px solid black;
+/*make all logos the same height for visual
+consistency*/
+.photo_1,
+.photo_2,
+.photo_3 {
+  height: 125px;
+  width: auto;
 }
 
 div {
-    border: solid 1px gray;
+border: solid 1px gray;
 }
+
 
 /* mobile rules */
 @media(orientation:portrait) {
