@@ -73,7 +73,7 @@ html, body {
     cursor: pointer;
 }
 
-/* Push restaurant list to the right of sidebar */
+/* Push restaurant list to right of sidebar */
 #restaurant-list {
-    margin-left: 170px;
+    margin-left: 170px; 
 }
