@@ -1,0 +1,135 @@
+<html>
+<head>
+  <!-- Link to CSS-->
+   <title>Restaurant Filter</title>
+  <link href="style.css" type="text/css" rel="stylesheet"/>
+</head>
+
+<body>
+  <!--Headline + subtitle-->
+  <h1 id="headline"> Chicago Restaurant Finder </h1>
+  <p class="subtitle"> Click on your desired restaurant to visit their website!</p>
+  
+  <!--Category filter buttons-->
+  <div class="category">
+    <button onclick="filter('all')">All</button>
+    <button onclick="filter('coffee')">Coffee</button>
+    <button onclick="filter('breakfast')">Breakfast</button>
+    <button onclick="filter('lunch')">Lunch</button>
+    <button onclick="filter('dinner')">Dinner</button>
+    <button onclick="filter('dessert')">Dessert</button>
+    <button onclick="filter('sports bar')">Sports Bar</button>
+    <button onclick="filter('cocktails')">Cocktails</button>
+  </div>
+  
+  
+  <div class="main-content">
+    <!--Sidebar filter buttons-->
+    <div id="sidebar">
+      <h3>Price</h3>
+      <button onclick="setPriceFilter('$')">$</button>
+      <button onclick="setPriceFilter('$$')">$$</button>
+      <button onclick="setPriceFilter('$$$')">$$$</button>
+      <button onclick="setPriceFilter('all')">All Prices</button>
+    </div>
+    
+    <!--Restaurant list-->
+    <div id="restaurant-list"></div>
+  </div>
+
+  <!--JavaScript code-->
+  <script>
+  // Restaurant array (where we store all the restaurants)
+  const restaurants = [
+{ name: "The Wormhole Coffee", type: "coffee", price: "$", url: "https://www.thewormholecoffee.com/" },
+{ name: "Groundswell Coffee Roasters", type: "coffee", price: "$$", url: "https://groundswellcoffee.com/" },
+{ name: "Starbucks Reserve Roastery", type: "coffee", price: "$$$", url: "https://www.starbucksreserve.com/en-us/locations/chicago" },
+
+
+{ name: "Valois Cafe", type: "breakfast", price: "$", url: "https://www.valoisrestaurant.com/" },
+{ name: "Chapel Street Cafe", type: "breakfast", price: "$$", url: "https://www.chapelstreetcafe.com/" },
+{ name: "Cafe Robey", type: "breakfast", price: "$$$", url: "https://www.caferobey.com/" },
+
+
+{ name: "Chomp Pizza", type: "lunch", price: "$", url: "https://www.chomppizza.com/" },
+{ name: "Medici on 57th", type: "lunch", price: "$$", url: "https://www.medici57th.com/" },
+{ name: "Monteverde", type: "lunch", price: "$$$", url: "https://monteverdechicago.com/" },
+
+
+{ name: "Gretel", type: "dinner", price: "$$", url: "https://www.gretelchicago.com/" },
+{ name: "Harry Caray’s Italian Steakhouse", type: "dinner", price: "$$$", url: "https://harrycarays.com/" },
+{ name: "Oriole", type: "dinner", price: "$$$$", url: "https://www.oriolechicago.com/" },
+
+
+{ name: "Do‑Rite Donuts & Chicken", type: "dessert", price: "$", url: "https://www.doritedonuts.com/" },
+{ name: "Margie’s Candies", type: "dessert", price: "$$", url: "https://www.margiescandies.com/" },
+{ name: "Sweet Mandy B’s", type: "dessert", price: "$$$", url: "https://www.sweetmandybs.com/" },
+
+
+{ name: "Whiskey Girl Tavern", type: "sports bar", price: "$", url: "https://www.whiskeygirltavern.com/" },
+{ name: "Old Town Ale House", type: "sports bar", price: "$$", url: "https://www.oldtownalehouse.com/" },
+
+
+{ name: "Kumiko", type: "cocktails", price: "$$$", url: "https://kumikochicago.com/" },
+{ name: "Gus’ Sip & Dip", type: "cocktails", price: "$$", url: "https://www.gussipanddip.com/" }
+];
+
+  // FUNCTIONS
+
+  // Rendering restaurants onto the page (since we're storing them in Java, not HTML)
+  function renderRestaurants() {
+  const list = document.getElementById("restaurant-list");
+  list.innerHTML = "";
+
+  restaurants.forEach(r => {
+    const div = document.createElement("div");
+    div.className = `item ${r.type}`;
+    div.textContent = `${r.name} (${r.price})`;
+    div.dataset.price = r.price;
+
+    // Make each restaurant button clickable to send user to corr. website
+    div.style.cursor = "pointer";
+    div.onclick = () => {
+    window.open(r.url, "_blank");
+  };
+    list.appendChild(div);
+  });
+  }
+
+  // Defining how the filtering action will work
+  function applyFilters() {
+    const items = document.querySelectorAll(".item");
+
+    items.forEach(item => {
+      const matchesType = currentType === "all" || item.classList.contains(currentType);
+      const matchesPrice = selectedPrice === "all" || item.dataset.price === selectedPrice;
+
+      if (matchesType && matchesPrice) {
+        item.classList.remove("hidden");
+      } else {
+        item.classList.add("hidden");
+      }
+    });
+  }
+
+  // Applying filter function for category
+  function filter(cat) {
+    currentType = cat;
+    applyFilters();
+  }
+
+  // Applying filter function for price
+  function setPriceFilter(price) {
+    selectedPrice = price;
+    applyFilters();
+  }
+
+  // Setting the filter state (default = "all")
+  let currentType = "all";
+  let selectedPrice = "all";
+
+  // Initial render
+  renderRestaurants();
+</script>
+</body>
+</html>
