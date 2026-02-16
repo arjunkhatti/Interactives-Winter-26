@@ -3,18 +3,66 @@
     <!-- Link to CSS file-->
      <title>Restaurant Filter</title>
      <link href="style.css" type="text/css" rel="stylesheet"/>
+
+     <!--Knight Lab Soundcite-->
+     <link href='https://cdn.knightlab.com/libs/soundcite/latest/css/player.css'
+     rel='stylesheet' type='text/css'><script type='text/javascript'
+     src='https://cdn.knightlab.com/libs/soundcite/latest/js/soundcite.min.js'></script>
 </head>
 
 <body>
+    <!--intro section-->
     <h1 id="headline"> Sam Darnold: from draft bust to Super Bowl champion </h1>
     
-    <div class="intro text"> Having played for five times in eight NFL seasons, most would think Sam Darnold's resumé reflects that of a second-string journeyman. 
-    <div class="storymap-container">
-    
+    <p> Having played for five times in eight NFL seasons, most would think Sam Darnold's resumé reflects
+        that of a second-string journeyman. But despite his rough start, Darnold battled for every chance he got. Now,
+        he's the latest Super Bowl champion quarterback.
+    </p>
+
+<div id="SoundCite">
+    <h3 class="section"> Darnold's Super Bowl performance </h3>
+    <p> Facing a disruptive Patriots secondary, Darnold completed 19 passes for 202 yards and threw
+        <!--Knight Lab Soundcite embed-->
+        <span class="soundcite" data-url="https://github.com/arjunkhatti/Interactives-Winter-26/raw/refs/heads/main/Sam%20Darnold's%20best%20throws%20in%20202-yard%20performance%20vs.%20Patriots%20%20'Super%20Bowl%20LX'.mp3"
+        data-start="183000" data-end="191000" data-plays="1">one passing touchdown.</span>
+        While his stats didn't jump off the page, Darnold took care of the ball, managed the clock well, and only surrendered one sack.
+    </p>
+</div>
+
+<div id="YouTube">
+    <h3 class="section">Darnold's post-game interview</h3>
+    <div class="media-row">
+        <!-- left side video -->
+        <div class="video-block">
+            <!--YouTube embed-->
+            <iframe src="https://www.youtube.com/embed/8ANqQn-qqIY?si=jZ-gb3eOkYwK0jX8"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen>
+            </iframe>
+        </div>
+        <!-- right side photo -->
+        <div class="photo-block">
+            <img src="698b70476495a.jpeg" alt="Sam Darnold celebrating after Super Bowl win">
+            <p class="caption">
+                Darnold celebrates after securing his first Super Bowl victory.
+            </p>
+        </div>
+
+    </div>
+
+</div>
+
+<div id="StoryMap">
+    <h3 class="section"> An immersive look into Darnold's NFL career journey </h3>
+    <!--Embedded StoryMap-->
+<div id="storymap-container">
     <iframe src="https://uploads.knightlab.com/storymapjs/aa29ff92e48a026e4bf600c42dc43427/super-bowl-lx/index.html" 
         frameborder="0"
         allowfullscreen>
     </iframe>
+</div>
 </div>
 
 </body>

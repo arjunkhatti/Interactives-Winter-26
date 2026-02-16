@@ -1,11 +1,55 @@
-.storymap-container {
-  max-width: 700px;   /* shrink overall size here */
-  margin: 40px auto;  /* center it */
-  aspect-ratio: 16 / 9;  /* keeps proportions */
+/* flex row to format photo and vieo*/
+.media-row {
+  display: flex;
+  gap: 30px;
+  align-items: stretch; 
+  margin-top: 20px;
 }
 
-.storymap-container iframe {
+/* left-side video formatting */
+.video-block {
+  flex: 1.2;
+}
+.video-block iframe {
   width: 100%;
-  height: 100%;
+  aspect-ratio: 16 / 9;
   border: none;
+  display: block;
+}
+
+/* right-side photo formatting */
+.photo-block {
+  flex: 0.8;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* pushes caption to bottom, image to top */
+}
+.photo-block img {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 6px;
+  /* no extra margins; top aligns with top of video */
+}
+.caption {
+  font-size: 0.9rem;
+  margin-top: 8px;
+}
+
+/* mobile view formatting */
+@media (max-width: 768px) {
+  .media-row {
+    flex-direction: column;
+  }
+}
+
+/* storymap formatting */
+#storymap-container {
+  width: 100%;
+  margin: 0;
+}
+#storymap-container iframe {
+  width: 100%;
+  height: 700px; 
+  border: none;
+  display: block;
 }
