@@ -1,0 +1,145 @@
+<html prefix="og: https://ogp.me/ns#">
+<head>
+    <title>Home Court Advantage</title>
+    <!-- Link to CSS file-->
+    <link href="style.css" type="text/css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Bebas+Neue&display=swap" rel="stylesheet">
+    <!-- Basic Metadata following open graph protocol -->
+    <meta property="og:title" content="Home Court Advantage"/>
+    <meta property="og:type" content="article"/>
+    <meta property="og:url" content="https://arjunkhatti.github.io/Interactives-Winter-26/index.html"/>
+    <meta property="og:image" content="https://arjunkhatti.github.io/Interactives-Winter-26/Hero-image.png"/>
+    <!-- JavaScript for team spotlight section, allowing the stories to reveal themselves after the team card is clicked -->
+    <script>
+        function toggleCard(header) {
+            const body = header.nextElementSibling;
+            const isOpen = body.classList.contains('open');
+            document.querySelectorAll('.card-body').forEach(b => b.classList.remove('open'));
+            document.querySelectorAll('.card-header').forEach(h => h.classList.remove('open'));
+            if (!isOpen) {
+                body.classList.add('open');
+                header.classList.add('open');
+            }
+        }
+    </script>
+</head>
+<body>
+    <!--create nav bar section that will be anchored to the top of the page-->
+    <nav id="navbar">
+        <ul>
+            <li><a href="#hero">Home</a></li>
+            <li><a href="methodology.html">Methodology</a></li>
+            <li><a href="about.html">About the Author</a></li>
+        </ul>
+    </nav>
+    <!-- hero section of main page that contains the headline, subhead, image and caption package-->
+    <section id="hero">
+        <div id="headline-package">
+            <h1 id="hero-title">Home Court <span id="title-advantage">Advantage</span></h1>
+            <p id="hero-desc">A data-driven look at how the top NCAA Division I basketball programs perform on their home floor.</p>
+        </div>
+        <div id="image-frame">
+            <img id="hero-image" src="Hero-image.png" alt="Pixel art illustration of a college basketball arena, made with Google Gemini Pro" />
+            <div id="image-caption">
+                <span id="caption-text">Playing at home carries several advantages that can<br>impact team performance and game outcomes.</span>
+                <span id="caption-credit">Illustration: Google Gemini Pro</span>
+            </div>
+        </div>
+    </section>
+    
+    <!-- small section that contextualizes the topic and adds information on the teams involved-->
+    <section id="conferences">
+        <div id="scroll-arrow">&#8595;</div>
+        <p id="stat-sentence">
+        From <strong>2015-2025</strong>, Power Five teams won <span class="stat-num">35%</span> more games
+        at home than away, by an average of <span class="stat-num">13.26</span> more points.
+        </p>
+        <div id="stat-divider"></div>
+        <p id="conferences-title">The Power Five Conferences</p>
+        <p id="conferences-subhead">Click logo to view teams</p>
+        <div id="conf-logos">
+            <a href="https://www.espn.com/mens-college-basketball/teams/_/group/2" target="_blank">
+                <img class="conf-logo" src="Atlantic_Coast_Conference_logo.svg" alt="ACC logo" /></a>
+            <a href="https://www.espn.com/mens-college-basketball/teams/_/group/7" target="_blank">
+                <img class="conf-logo" src="Big_Ten_Conference_logo.svg" alt="Big Ten logo" /></a>
+            <a href="https://www.espn.com/mens-college-basketball/teams/_/group/8" target="_blank">
+                <img class="conf-logo" src="Big_12_Conference_logo.svg" alt="Big 12 logo" /></a>
+            <a href="https://www.espn.com/mens-college-basketball/teams/_/group/23" target="_blank">
+                <img class="conf-logo" src="Southeastern_Conference_logo.svg" alt="SEC logo" /></a>
+            <a href="https://www.espn.com/mens-college-basketball/teams/_/group/4" target="_blank">
+                <img class="conf-logo" src="Big_East_Conference_logo_stacked.svg" alt="Big East logo" /></a>
+        </div>
+        <p id="conferences-credit"> Images: Wikipedia Commons</p>
+    </section>
+    
+    <!-- embedded Flourish story, which includes two bar charts that can be toggled between-->
+    <section id="charts">
+        <div class="flourish-embed flourish-chart" data-src="story/3600659">
+            <script src="https://public.flourish.studio/resources/embed.js"></script>
+            <noscript><img src="https://public.flourish.studio/story/3600659/thumbnail" width="100%" alt="visualization" /></noscript>
+        </div>
+    </section>
+
+    <!-- team spotlight section that includes a brief story and accompanying statistics for three dominant college basketball teams. This section uses a JS toggling function to reveal the story when the team card is clicked -->
+    <section id="team-spotlights">
+        <h2 id="spotlight-title">Team Spotlights</h2>
+        <p id="spotlight-sub">Click on each team to read more about their home court advantages.<br>Statistics are based on combined seasonal game data from 2015-2025.</p>
+        <div id="spotlight-row">
+
+            <div class="team-card">
+                <div class="card-header" onclick="toggleCard(this)">
+                    <span class="team-name">Purdue Boilermakers</span>
+                    <span class="team-conf">Big Ten</span>
+                    <span class="team-subhead">Mackey Arena's booming atmosphere sparks offensive firepower and gets a favorable whistle.</span>
+                </div>
+                <div class="card-body">
+                    <p class="team-story">Measuring peak sound levels of up to <a href="https://www.jconline.com/story/sports/college/purdue/basketball/2026/02/20/at-mackey-big-tens-loudest-arena-poses-risk-to-opponents-possibly-fans/88782236007/" target="_blank">124.3 decibels</a>,
+                        Purdue's Mackey Arena is one of the loudest venues teams will ever face. The arena's bowl shape creates a tightly packed crowd, making it easy for fans to get in opponents' heads. While this atmosphere gives the Boilermakers
+                        a solid defensive boost, the real advantage comes on the offensive end. Since 2015, their offensive rating increases by 14 points and their true shooting by six percentage points on average while at Mackey. Most notably, the team draws
+                        nearly five more fouls than their opponents per game at home, which is the most out of all Power Five teams.</p>
+                    <div class="stat-row"><span><strong>Win Rate</strong></span><span>Home: 91%</span><span>Away: 55%</span></div>
+                    <div class="stat-row"><span><strong>Net Fouls/Game</strong></span><span>Home: -4.68</span><span>Away: +3.67</span></div>
+                    <div class="stat-row"><span><strong>Offensive Rating</strong></span><span>Home: 117.9</span><span>Away: 104.7</span></div>
+                    <div class="stat-row"><span><strong>True Shooting%</strong></span><span>Home: 60%</span><span>Away: 54%</span></div>
+                </div>
+            </div>
+
+            <div class="team-card">
+                <div class="card-header" onclick="toggleCard(this)">
+                    <span class="team-name">Brigham Young Cougars</span>
+                    <span class="team-conf">Big 12</span>
+                    <span class="team-subhead">Marriott Center's hostile fans intimidate opposing free throw shooters and fuel lockdown defense.</span>
+                </div>
+                <div class="card-body">
+                    <p class="team-story">BYU boasts a strong fan base at Marriott Center, <a href="https://byucougars.com/fan-support" target="_blank">ranking seventh</a> in Division I in average attendance with 17,054 fans per game. The team's student section,
+                        dubbed as "The Roar of Cougars," is known for being an intimidating presence on opponents, especially when they step to the free throw stripe. Fans can be seen jumping in unison as the opponent goes up to shoot, all while waving large inflatables and dizzying signs.
+                        Over the past ten seasons, BYU has held its opponenets to a mere 67% scoring rate on free throws, which ranks first among Power Five teams.</p>
+                    <div class="stat-row"><span><strong>Win Rate</strong></span><span>Home: 85%</span><span>Away: 50%</span></div>
+                    <div class="stat-row"><span><strong>Avg Point Margin</strong></span><span>Home: +14.65</span><span>Away: +1.19</span></div>
+                    <div class="stat-row"><span><strong>Defensive Rating</strong></span><span>Home: 92</span><span>Away: 103.4</span></div>
+                    <div class="stat-row"><span><strong>Opponent Free Throw%</strong></span><span>Home: 67%</span><span>Away: 72%</span></div>
+                </div>
+            </div>
+
+            <div class="team-card">
+                <div class="card-header" onclick="toggleCard(this)">
+                    <span class="team-name">Duke Blue Devils</span>
+                    <span class="team-conf">ACC</span>
+                    <span class="team-subhead">Cameron Indoor Stadium's electric student section bolsters team energy while destroying opponents' morale. </span>
+                </div>
+                <div class="card-body">
+                    <p class="team-story">Getting the opportunity to watch a game in Duke's Cameron Indoor Stadium is as cutthroat as it gets. The venue has sold out <a href="https://byucougars.com/fan-support" target="_blank">594 consecutive games</a>, which dates back to 1990, and the Blue Devils have won over 90% of the games in that stretch.
+                    To attend Duke's biggest games of the season, students <a href="https://www.wral.com/sports/krzyzewskiville-duke-coach-k-cameron-february-2026/" target="_blank">camp outside the arena</a> for days just to get a shot at a ticket. The student section, known as the "Cameron Crazies", is uniquely located alongside the court, giving
+                    fans closer proximity for heckling opponents and cheering on their players. 
+                    </p>
+                    <div class="stat-row"><span><strong>Avg Point Margin</strong></span><span>Home: 18.53</span><span>Away: 6.23</span></div>
+                    <div class="stat-row"><span><strong>Opponent True Shooting%</strong></span><span>Home: 48%</span><span>Away: 52%</span></div>
+                    <div class="stat-row"><span><strong>Defensive Rating</strong></span><span>Home: 91.4</span><span>Away: 100.9</span></div>
+                    <div class="stat-row"><span><strong>Offensive Rating</strong></span><span>Home: 117.4</span><span>Away: 109.8</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>

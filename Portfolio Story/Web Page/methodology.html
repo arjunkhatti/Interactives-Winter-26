@@ -1,0 +1,67 @@
+<html prefix="og: https://ogp.me/ns#">
+<head>
+    <title>Methodology — Home Court Advantage</title>
+    <!-- Link to CSS file-->
+    <link href="style.css" type="text/css" rel="stylesheet"/>
+    <meta property="og:title" content="Methodology — Home Court Advantage" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://arjunkhatti.github.io/Interactives-Winter-26/index.html"/> />
+    <meta property="og:image" content="https://arjunkhatti.github.io/Interactives-Winter-26/Hero-image.png"/> />
+</head>
+<body>
+    <!-- same navbar as home page-->
+    <nav id="navbar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="methodology.html">Methodology</a></li>
+            <li><a href="about.html">About the Author</a></li>
+        </ul>
+    </nav>
+
+    <!-- main about me section to describe the data collection process-->
+    <section id="methodology">
+        <div id="method-header">
+            <h1 id="method-title">Methodology</h1>
+            <p id="method-sub">How the data was collected and analyzed</p>
+        </div>
+        <div id="method-body">
+
+            <div class="method-block">
+                <h3>Data Source</h3>
+                <p>All home and away statistics were collected from <a href="https://stathead.com/basketball/" target="_blank">Sports Reference Stathead</a>, which aggregates NCAA Division I basketball data.
+                    The data was collected using the Team Game Finder tool, which allows users to find team totals from all games in a seasonal window. The data was collected in two datasets — one for true home games and one for true away
+                    games — for all Division I teams from the 2015-2016 season to the 2024-2025 season.</p>
+            </div>
+
+            <div class="method-block">
+                <h3>Excel Filtering</h3>
+                <p>The collected data contained totals for every Divison I team, but this project only focused on teams in what is considered the "Power Five Conferences."
+                    Using a reference table of all the teams in these five conferences (Big Ten, Big 12, SEC, ACC, Big East), each team was given a conference label.
+                    This conference label was then used to filter the dataset to only include teams in the Power Five Conferences.
+                    With the home and away datasets filtered down to the Power Five Conferences, each team's home and away data also needed to be merged onto one dataset.
+                    Using team name as a matching label, each team's away data was matched to the home data. The resulting dataset had a row for each Power Five team that
+                    contained its totals such as Win% and Point Margin for both home and away games within the seasonal window.
+                </p>
+            </div>
+
+            <div class="method-block">
+                <h3>Calculations</h3>
+                <p> With home and away data combined, a few key calculations were made. First, to find the average point margin for each team at home and away, the point margin column was divided by the respective number of games played either home or away.
+                    To calculate the difference in home vs. away performance on key statistics, the away column was subtracted from the home column for the given statistic. For the Win % and Average Point Margin statistics, these differences were then plotted on bar charts via Flourish and published to the page.</p>
+            </div>
+
+            <div class="method-block">
+                <h3>Data Files</h3>
+                <p>The raw and processed data used in this project are available for download below.</p>
+                <ul id="source-links">
+                    <li><a href="https://www.sports-reference.com/stathead/basketball/cbb/team-game-finder.cgi?request=1&match=team_game_combined_career&order_by=diff_pts&timeframe=seasons&year_min=2016&year_max=2025&comp_type=reg&comp_id=NCAAM&home_away_neutral=h" target="_blank">Sports Reference Stathead (Home Games)</a></li>
+                    <li><a href="https://www.sports-reference.com/stathead/basketball/cbb/team-game-finder.cgi?request=1&match=team_game_combined_career&order_by=diff_pts&timeframe=seasons&year_min=2016&year_max=2025&comp_type=reg&comp_id=NCAAM&home_away_neutral=a" target="_blank">Sports Reference Stathead (Away Games)</a></li>
+                    <li><a href="HCA Data Flourish.xlsx" target="_blank">Download Excel Data Spreadsheet</a></li>
+                </ul>
+            </div>
+
+        </div>
+    </section>
+
+</body>
+</html>

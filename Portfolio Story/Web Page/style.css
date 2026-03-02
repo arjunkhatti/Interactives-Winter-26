@@ -1,0 +1,455 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* this acts as a margin with a shade of the body background color */
+html {
+    background-color: #dddad6;
+}
+
+/* set main background color, font family, font color, and width of content (60% for readability) */
+body {
+    background-color: #edeae6;
+    color: #2a2a2a;
+    font-family: Georgia, serif;
+    max-width: 60%;
+    margin: 0 auto;
+}
+
+/* ── NAV BAR SECTION ── */
+#navbar {
+    position: fixed;
+    top: 0;
+    width: 60%;
+    height: 64px;
+    background-color: #edeae6;
+    display: flex;
+    align-items: center;
+    padding: 0 5%;
+    border-bottom: 2px solid #2a2a2a;
+    z-index: 100;
+}
+
+#navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 2.5rem;
+}
+
+#navbar a {
+    font-size: 0.85rem;
+    letter-spacing: 0.08rem;
+    text-transform: uppercase;
+    color: #666;
+}
+
+#navbar a:hover {
+    color: #cc2200;
+}
+
+/* -- HERO SECTION -- */
+
+/* Stack headline package and image and ensure proper spacing */
+#hero {
+  padding-top: 89px;   
+  margin-bottom: -30px;        
+  display: flex;
+  flex-direction: column;
+  text-align: center;    
+}
+
+#headline-package {
+  margin-bottom: 25px;             
+}
+
+/* Format headline package */
+#hero-title {
+    font-size: 2.8rem;
+    font-weight: bold;
+    color: #2a2a2a;
+    margin-bottom: 0.3rem;
+}
+
+#title-advantage {
+    font-size: 2.8rem;
+    font-weight: bold;
+    font-style: italic;
+    color: #cc2200;
+    margin-bottom: 0.3rem;
+}
+
+#hero-desc {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.7;
+}
+
+/* Image and caption formatting*/
+#image-frame {
+    position: relative;
+}
+
+#hero-image {
+    position: relative;
+    width: 100%;
+    border: 1px solid black;
+}
+
+#image-caption {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    padding: 0.5rem 0.6rem;
+    gap: 0.15rem;
+    text-align: right;
+}
+
+#caption-text {
+    font-size: 0.75rem;
+    color: white;
+}
+
+#caption-credit {
+    font-size: 0.75rem;
+    color: #999;
+}
+
+/* -- CONFERENCES SECTION -- */
+#conferences {
+    padding: 2rem 5%;
+    text-align: center;
+    background-color: #edeae6;
+}
+
+/* Format first subsection of arrow and statistics sentence*/
+#scroll-arrow {
+    font-size: 3rem;
+    color: #cc2200;
+    margin-top: 0.5rem;
+}
+
+#stat-sentence {
+    font-family: Georgia, serif;
+    font-size: 1.5rem;
+    color: #2a2a2a;
+    text-align: center;
+    line-height: 1.6;
+    max-width: 62%;
+    margin: 1.5rem auto 3.5rem auto;
+}
+
+.stat-num {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2.5rem;
+    color: #cc2200;
+    line-height: 1;
+    vertical-align: middle;
+}
+
+#stat-divider {
+    width: 150px;
+    height: 2px;
+    background: #cc2200;
+    margin: 0 auto;
+    margin-top: 1.5rem;
+}
+
+/* Format conferences title */
+#conferences-title {
+    font-size: 1.85rem;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: bold;
+    color: #2a2a2a;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+#conferences-subhead {
+    font-size: 1rem;
+    font-family: 'Source Sans Pro', sans-serif;
+    color: #666;
+    margin-bottom: 0.5rem;
+}
+
+/* Format logo images and credits*/
+#conf-logos {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 0.5rem 2.25rem;
+    flex-wrap: wrap;
+}
+
+.conf-logo {
+    width: 125px;
+    height: 125px;
+    object-fit: contain;
+}
+
+#conferences-credit {
+    position: relative;
+    font-family: 'Georgia', serif;
+    font-size: 0.75rem;
+    text-align: right;
+}
+
+/* ── TEAM SPOTLIGHTS SECTION ── */
+
+/* styles for headline package */
+#team-spotlights {
+    padding: 2.5rem 5%;
+    background-color: #edeae6;
+    text-align: center;
+}
+
+#spotlight-title {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 1.85rem;
+    font-weight: bold;
+    color: #2a2a2a;
+    margin-bottom: 0.4rem;
+}
+
+#spotlight-sub {
+    font-family: Georgia, serif;
+    font-size: 0.85rem;
+    color: #666;
+    margin-bottom: 2rem;
+}
+
+/* styles for formatting team cards section*/
+#spotlight-row {
+    display: flex;
+    gap: 1rem;
+    text-align: left;
+}
+
+.team-card {
+    flex: 1;
+    border: 1px solid #000000;
+}
+
+/* styles for within each team card*/
+.card-header {
+    padding: 1.2rem 1rem;
+    cursor: pointer;
+    background: #edeae6;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+.team-name {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.6rem;
+    color: #2a2a2a;
+    line-height: 1;
+}
+
+.team-conf {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 0.6rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #cc2200;
+}
+
+.team-subhead {
+    font-family: Georgia, serif;
+    font-size: 0.72rem;
+    color: #666;
+    font-style: italic;
+    line-height: 1.4;
+}
+
+.card-body {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+    background: #e4e1dd;
+    padding: 0 1rem;
+}
+
+.card-body.open {
+    max-height: 800px;
+    padding: 1.2rem 1rem;
+}
+
+.team-story {
+    font-family: Georgia, serif;
+    font-size: 0.78rem;
+    color: black;
+    line-height: 1.7;
+    margin-bottom: 1rem;
+}
+
+.stat-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.4rem 0;
+    border-bottom: 1px solid #e4e1dd;
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 0.65rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: black;
+}
+
+/* these styles allow for proper spacing on the statistics so they are readable in desktop format. There are special mobile formatting rules for the team spotlight section so it is readable on mobile.*/
+.stat-row span:nth-child(1) { width: 40%; }
+.stat-row span:nth-child(2) { width: 30%; }
+.stat-row span:nth-child(3) { width: 30%; }
+
+/* styles to add colors for hovering and when toggled card is open*/
+.card-header:hover { background: white; }
+.card-header.open { background: white; }
+.card-header.open .team-name { color: black; }
+.card-header.open .team-subhead { color: black; }
+.card-header.open .team-story { color: white; }
+
+/* -- ABOUT PAGE STYLING -- */
+#about {
+    padding: 6rem 5% 3rem 5%;
+}
+
+#about-header {
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid #2a2a2a;
+}
+
+#about-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 3rem;
+    color: #2a2a2a;
+    line-height: 1;
+}
+
+#about-sub {
+    font-family: Georgia, serif;
+    font-size: 0.85rem;
+    color: #666;
+    font-style: italic;
+    margin-top: 0.3rem;
+}
+
+#about-body {
+    display: flex;
+    gap: 2.5rem;
+    align-items: flex-start;
+}
+
+#about-photo {
+    width: 180px;
+    height: 250;
+    border: 1px solid black;
+}
+
+#about-arjun {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.8rem;
+    color: #2a2a2a;
+    margin-bottom: 0.8rem;
+}
+
+#about-text p {
+    font-family: Georgia, serif;
+    font-size: 0.9rem;
+    color: #2a2a2a;
+    line-height: 1.7;
+}
+
+/* -- METHODOLOGY SECTION STYLING -- */
+#methodology {
+    padding: 6rem 5% 3rem 5%;
+}
+
+#method-header {
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid #2a2a2a;
+}
+
+#method-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 3rem;
+    color: #2a2a2a;
+    line-height: 1;
+}
+
+#method-sub {
+    font-family: Georgia, serif;
+    font-size: 0.85rem;
+    color: #888;
+    font-style: italic;
+    margin-top: 0.3rem;
+}
+
+.method-block {
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #d0cdc9;
+}
+
+/* no border after last section */
+.method-block:last-child {
+    border-bottom: none;
+}
+
+.method-block h3 {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 0.7rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: #cc2200;
+    margin-bottom: 0.6rem;
+}
+
+.method-block p {
+    font-family: Georgia, serif;
+    font-size: 0.9rem;
+    color: #555;
+    line-height: 1.7;
+}
+
+#source-links {
+    list-style: none;
+    margin-top: 0.8rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+#source-links a {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 0.8rem;
+    color: #cc2200;
+}
+
+/* ── MOBILE ── */
+@media (orientation: portrait) {
+    body {
+        max-width: 100%;
+        font-size: 1.2em;
+    }
+    #navbar {
+        width: 100%;
+        left: 0;
+        transform: none;
+    }
+
+    /* for mobile view, re-orient team spotlights to stack vertically, allowing for a cleaner visual read*/
+    #spotlight-row {
+        flex-direction: column;
+    }
+
+    .stat-row {
+        flex-direction: column;
+        gap: 0.2rem;
+    }
+}
