@@ -198,6 +198,16 @@ body {
     text-align: right;
 }
 
+/* FLOURISH SECTION */
+#charts {
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 2rem 5%;
+    background-color: #e4e1dd;
+}
+
 /* ── TEAM SPOTLIGHTS SECTION ── */
 
 /* styles for headline package */

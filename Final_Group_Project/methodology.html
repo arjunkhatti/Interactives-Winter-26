@@ -1,0 +1,64 @@
+<html prefix="og: https://ogp.me/ns#">
+<head>
+    <!-- Title -->
+    <title>Methodology — Betting on Illinois: A Look at the State's Sports Betting Economy</title>
+    <!-- Link to CSS file-->
+    <link href="style.css" type="text/css" rel="stylesheet"/>
+    <!-- Metadata -->
+    <meta property="og:title" content="Methodology — Betting on Illinois: A Look at the State's Sports Betting Economy" />
+    <meta property="og:type" content="article"/>
+    <meta property="og:url" content="https://arjunkhatti.github.io/Interactives-Winter-26/Final_Group_Project/"/>
+    <meta property="og:image" content="https://arjunkhatti.github.io/Interactives-Winter-26/Final_Group_Project/metadata_image.jpg"/>
+</head>
+
+<body>
+    <!-- same navbar as home page-->
+    <nav id="navbar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="methodology.html">Methodology</a></li>
+        </ul>
+    </nav>
+
+    <!-- section to describe methodology-->
+    <section id="methodology">
+        <div id="method-header">
+            <h1 id="method-title">Methodology</h1>
+            <p id="method-sub">Information about our process and collaboration</p>
+        </div>
+        <div id="method-body">
+            <div class="method-block">
+                <h3>Team Contributions</h3>
+                <p>This project is a collaboration between eight students from two courses at Northwestern's Medill School of Journalism. Four students in the Introduction to Data Journalism course collected data reports from the Illinois Gaming Board and aggregated them into Google Sheets datasets. Then, four students in the Storytelling: Interactive News course analyzed the data, created Flourish visualizations and constructed this web page.
+                </p>
+            </div>
+
+            <div class="method-block">
+                <h3>Data Collection</h3>
+                <p>All data shown in the visualizations comes from the Illinois Gaming Board’s Sports Wagering Monthly Reports page. As a team, the data journalism students downloaded data in CSV form for each month from January 2021 to December 2025, including both the “Detail Report” and “Sport Detail Report” reports. From there, they pasted the content from each CSV in a separate Google Sheet, so they could add an identifying year and month column to each row.
+                </p>
+            </div>
+
+            <div class="method-block">
+                <h3>Data Aggregation</h3>
+                <p>After putting the data in Google Sheets and making sure each row was identifiable by month and year, the data journalism students re-downloaded every sheet as a CSV and loaded them into an R Studio console for binding. Using the tidyverse library’s bind_rows function, they ended up with two bound datasets: one for the Detail Reports and one for the Sport Detail Reports. The team put those back into a new Google Sheet to analyze, pivot and visualize the clean and bound data.
+                </p>
+            </div>
+
+            <div class="method-block">
+                <h3>Data Analysis</h3>
+                <p>From there, the interactive news students analyzed the data to determine which trends were most important and striking. The main points of analysis were overall betting activity over the years, pre-game (Tier 1) vs. live betting (Tier 2) trends, sportsbook popularity, and sport-specific and parlay trends. Primary takeaways included a recent drop in betting activity following a new per-wager tax in Illinois, along with a rise in both parlays and live betting.
+                </p>
+            </div>
+
+            <div class="method-block">
+                <h3>Data Visualization</h3>
+                <p>The interactive news team sorted relevant data for use in Flourish visualizations, which depict the trends they discovered. This group created subsets of the data based on variables such as month, year, sport and casino licensee. The team copied these subsets into Flourish, where they made line charts, static bar charts, area charts and a racing bar chart.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+</body>
+</html>
